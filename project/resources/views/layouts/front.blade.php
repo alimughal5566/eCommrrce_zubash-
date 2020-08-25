@@ -113,10 +113,14 @@
     <!--  Ending of subscribe-pre-loader Area   -->
 
 @endif
-
 @endif
 
-
+    <section class="top-strip">
+            <div class="container-fluid">
+                <p><span>Call us +92 21 111-244-266 |</span><span> Free shipping on orders above PKR 1500.</span> <span> No return or exchange on Sale Items.</span>
+                </p>
+            </div>
+    </section>
 	<section class="top-header">
 		<div class="container">
 			<div class="row">
@@ -125,8 +129,6 @@
 						<div class="left-content">
 							<div class="list">
 								<ul>
-
-
 									@if($gs->is_language == 1)
 									<li>
 										<div class="language-selector">
