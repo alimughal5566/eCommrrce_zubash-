@@ -319,19 +319,18 @@ select:focus {
   margin-bottom: 12px;
   padding-bottom: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-  display: block;
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
 
   .section-top .section-title {
-    font-size: 18px;
-    line-height: 38px;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 25px;
     color: #143250;
     display: inline-block;
     position: relative;
@@ -639,6 +638,9 @@ Logo Header Area Start
 .logo-header {
   padding: 20px 0px 20px;
   }
+.logo-header .logo img{
+  height: 60px;
+}
   .logo-header .search-box {
     height: 50px;
     width: 100%;
@@ -1335,7 +1337,6 @@ nav button {
 .category-area{    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
     flex-wrap: wrap;}
 .main-menu-div{text-align:left;line-height:1;vertical-align:middle;display:inline-block}
 .main-menu-div ul{margin:0;padding:0;line-height:1}

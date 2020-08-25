@@ -392,7 +392,8 @@ line-height: unset;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .logo-header .search-box {
-  border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .report-area a {
     font-size: 14px;
@@ -453,7 +454,7 @@ line-height: unset;
 }
 
 .logo-header .search-box-wrapper{
-  padding: 0px 10px;
+    padding: 0px 50px;
 }
 
 .message-modal .modal .modal-dialog {

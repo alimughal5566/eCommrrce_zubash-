@@ -649,6 +649,7 @@ input[type=checkbox]:checked + label:before {
 
   }
   .logo-header .search-box .search-form button {
+border-radius: 0 10px 10px 0;
         background: <?php echo $color; ?>;
         }
   .categories_title {
