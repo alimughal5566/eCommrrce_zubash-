@@ -499,7 +499,7 @@
 <footer class="footer" id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="footer-info-area">
                     <div class="footer-logo">
                         <a href="{{ route('front.index') }}" class="logo-link">
@@ -563,7 +563,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="footer-widget info-link-widget">
                     <h4 class="title">
                         {{ $langg->lang21 }}
@@ -591,35 +591,80 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="footer-widget recent-post-widget">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-widget info-link-widget">
                     <h4 class="title">
-                        {{ $langg->lang24 }}
+                        {{ $langg->lang21 }}
                     </h4>
-                    <ul class="post-list">
-                        @foreach (App\Models\Blog::orderBy('created_at', 'desc')->limit(3)->get() as $blog)
+                    <ul class="link-list">
+                        <li>
+                            <a href="{{ route('front.index') }}">
+                                <i class="fas fa-angle-double-right"></i>{{ $langg->lang22 }}
+                            </a>
+                        </li>
+
+                        @foreach(DB::table('pages')->where('footer','=',1)->get() as $data)
                             <li>
-                                <div class="post">
-                                    <div class="post-img">
-                                        <img style="width: 73px; height: 59px;"
-                                             src="{{ asset('assets/images/blogs/'.$blog->photo) }}" alt="">
-                                    </div>
-                                    <div class="post-details">
-                                        <a href="{{ route('front.blogshow',$blog->id) }}">
-                                            <h4 class="post-title">
-                                                {{mb_strlen($blog->title,'utf-8') > 45 ? mb_substr($blog->title,0,45,'utf-8')." .." : $blog->title}}
-                                            </h4>
-                                        </a>
-                                        <p class="date">
-                                            {{ date('M d - Y',(strtotime($blog->created_at))) }}
-                                        </p>
-                                    </div>
-                                </div>
+                                <a href="{{ route('front.page',$data->slug) }}">
+                                    <i class="fas fa-angle-double-right"></i>{{ $data->title }}
+                                </a>
                             </li>
                         @endforeach
+
+                        <li>
+                            <a href="{{ route('front.contact') }}">
+                                <i class="fas fa-angle-double-right"></i>{{ $langg->lang23 }}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-widget courier-widget">
+                    <h4 class="title">
+                        Track your order
+                    </h4>
+                    <ul>
+                        <li><a href="#"><img src="assets/images/couriers/courier1.png" height="" width="" alt="courier1"> </a></li>
+                        <li><a href="#"><img src="assets/images/couriers/courier3.png" height="" width="" alt="courier3"></a></li>
+                        <li><a href="#"><img src="assets/images/couriers/courier4.png" height="" width="" alt="courier4"></a></li>
+                    </ul>
+                    <h6 class="title">International Deliveries</h6>
+                    <ul>
+                        <li><a href="#"><img src="assets/images/couriers/courier2.png" height="" width="" alt="courier2"> </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            {{--            <div class="col-md-6 col-lg-4">
+                            <div class="footer-widget recent-post-widget">
+                                <h4 class="title">
+                                    {{ $langg->lang24 }}
+                                </h4>
+                                <ul class="post-list">
+                                    @foreach (App\Models\Blog::orderBy('created_at', 'desc')->limit(3)->get() as $blog)
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-img">
+                                                    <img style="width: 73px; height: 59px;"
+                                                         src="{{ asset('assets/images/blogs/'.$blog->photo) }}" alt="">
+                                                </div>
+                                                <div class="post-details">
+                                                    <a href="{{ route('front.blogshow',$blog->id) }}">
+                                                        <h4 class="post-title">
+                                                            {{mb_strlen($blog->title,'utf-8') > 45 ? mb_substr($blog->title,0,45,'utf-8')." .." : $blog->title}}
+                                                        </h4>
+                                                    </a>
+                                                    <p class="date">
+                                                        {{ date('M d - Y',(strtotime($blog->created_at))) }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>--}}
         </div>
     </div>
 
