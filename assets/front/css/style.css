@@ -1331,6 +1331,60 @@ nav button {
 
 
 /*-----------------------------
+/*=====menu=====================*/
+.category-area{    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    flex-wrap: wrap;}
+.main-menu-div{text-align:left;line-height:1;vertical-align:middle;display:inline-block}
+.main-menu-div ul{margin:0;padding:0;line-height:1}
+.main-menu-div ul li{padding:0;margin:0;transition:all 0.2s linear}
+.main-menu-div ul li a{line-height:normal;position:relative;z-index:1}
+
+/* only first level menu */
+.main-menu-div>ul{margin:0}
+.main-menu-div>ul>li{display:inline-block}
+.main-menu-div>ul>::before{display:none}
+.main-menu-div>ul>li>a{display:inline-block;}
+
+/* submenu */
+.main-menu-div ul li.has-sub{position:relative}
+.main-menu-div ul li ul{visibility:hidden;opacity:0;position:absolute;top:100%;left:-42px;margin:0;min-width:400px;padding:10px 20px;z-index:9;border:5px solid #fff;border-top:none;}
+.main-menu-div ul li.hovered>ul{visibility:visible;opacity:1;transition:all 0.3s linear;background-color:#021641;}
+.main-menu-div ul li ul li{display:block;height:0;transition:all 0.3s linear}
+.main-menu-nav {
+  text-align: center;
+  margin-top: 15px;
+}
+.main-menu-nav ul li ul li::before{display:none}
+.main-menu-div ul li.hovered>ul>li{height:39px}
+.main-menu-div ul li ul li a{color:#fff!important;line-height:20px;display:block;padding:10px;text-align:left;}
+.main-menu-div ul li ul li a:hover{background:#5878a5}
+.main-menu-div>ul>li>ul>li>ul{top:10px;left:370px}
+.main-menu-div>ul>li.hovered>ul>li.hovered>ul{top:10px}
+.main-menu-div>ul>li.hovered>ul>li.hovered>ul>li{height:39px}
+.main-menu-div>ul>li>ul:before{content:"";border-bottom:10px solid #021641;border-left:10px solid #fff;border-right:10px solid #fff;top:-10px;position:absolute;left:42px;}
+
+/* Changeable menu css */
+.main-menu-div ul li a{padding:15px;font-size:16px;line-height:1.2;text-transform:capitalize;font-weight:500;}
+.main-menu-div>ul>li:hover,.main-menu-div>ul>li>a.current-menu-item,.main-menu-div ul li ul{background:transparent}
+.main-menu-div>ul>li>a{font-weight:400;font-size:15px;color:#000;padding-left:20px;padding-right:20px;padding-top:15px;padding-bottom:15px;text-transform:uppercase;}
+
+@media (min-width: 1200px){
+  .main-menu-div>ul>li>a {
+    padding: 0 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .main-menu-nav .menu-toggler, .main-menu-nav .menu-header {
+    display: none;
+  }
+  .main-menu-nav .menu-toggler, .main-menu-nav .menu-header {
+    display: none;
+  }
+}
+/*-----------------------------
 ** Hero Area Start
 ------------------------------*/
 
@@ -1361,7 +1415,7 @@ nav button {
     padding: 0px 170px;
    }
   .hero-area .hero-area-slider .intro-carousel .intro-content.slide-three {
-    text-align: right; 
+    text-align: right;
     padding-left: 340px;
   }
 
@@ -1449,7 +1503,7 @@ nav button {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; 
+  justify-content: center;
   padding: 15px;
 }
 .info-area .info-box .icon img{
@@ -1565,7 +1619,7 @@ nav button {
   .categori-item .section-top {
     margin-bottom: 22px; }
 
-     
+
 .item {
   overflow: hidden;
   display: block;
@@ -1584,7 +1638,7 @@ nav button {
     -o-box-shadow: 0 0 10px rgba(0,0,0,0.15);
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
   }
-  
+
   .item .item-img {
     position: relative;
     overflow: hidden;
@@ -5227,7 +5281,7 @@ nav button {
 ** LOgin Signup  Area Start
 ---------------------------*/
 .login-signup {
-  padding: 60px 0px 60px; 
+  padding: 60px 0px 60px;
   z-index: 3;
   position: relative;
 }
@@ -7382,7 +7436,7 @@ padding-right: 10px!important;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-  .single-box .left-area { 
+  .single-box .left-area {
     width: 120px;
     height: 120px;
     margin-right: 10px; }
@@ -7441,7 +7495,7 @@ padding-right: 10px!important;
           -webkit-transition: all 0.3s ease-in;
           -o-transition: all 0.3s ease-in;
           transition: all 0.3s ease-in; }
-          
+
         .single-box .right-area .action-meta li .cart-btn {
           cursor: pointer;
           color: #00aeff;
@@ -7497,7 +7551,7 @@ padding-right: 10px!important;
     opacity: 1; }
   .product-tab .section-top .nav .nav-item .nav-link.active::after {
     opacity: 1; }
-    
+
 .product-tab .tab-content{
   margin-top: 15px;
 }
