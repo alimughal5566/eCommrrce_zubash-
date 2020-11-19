@@ -32,7 +32,7 @@
 <section class="product-details-page">
   <div class="container">
     <div class="row">
-    <div class="col-lg-9">
+    <div class="col-lg-12">
         <div class="row">
 
             <div class="col-lg-5 col-md-12">
@@ -107,7 +107,11 @@
                   </div>
 
 
-
+                  @if( $productt->sku != null )
+                  <p class="p-sku">
+                    {{ $langg->lang77 }}: <span class="idno">{{ $productt->sku }}</span>
+                  </p>
+                  @endif
             <div class="product-price">
               <p class="title">{{ $langg->lang87 }} :</p>
                     <p class="price"><span id="sizeprice">{{ $productt->showPrice() }}</span>
@@ -119,7 +123,7 @@
                     @endif
                   </div>
 
-                  <div class="info-meta-2">
+                  <!-- <div class="info-meta-2">
                     <ul>
 
                       @if($productt->type == 'License')
@@ -145,7 +149,7 @@
                       @endif
 
                     </ul>
-                  </div>
+                  </div> -->
 
 
                   @if(!empty($productt->size))
@@ -352,11 +356,7 @@
                   @if($productt->ship != null)
                     <p class="estimate-time">{{ $langg->lang86 }}: <b> {{ $productt->ship }}</b></p>
                   @endif
-                  @if( $productt->sku != null )
-                  <p class="p-sku">
-                    {{ $langg->lang77 }}: <span class="idno">{{ $productt->sku }}</span>
-                  </p>
-                  @endif
+                 
       @if($gs->is_report)
 
       {{-- PRODUCT REPORT SECTION --}}
@@ -401,10 +401,10 @@
                     </div>
                     <div class="tab-content-wrapper">
                       <div id="tabs-1" class="tab-content-area">
-                        <p>{!! $productt->details !!}</p>
+                        {!! $productt->details !!}
                       </div>
                       <div id="tabs-2" class="tab-content-area">
-                        <p>{!! $productt->policy !!}</p>
+                        {!! $productt->policy !!}
                       </div>
                       <div id="tabs-3" class="tab-content-area">
                         <div class="heading-area">
@@ -539,7 +539,7 @@
                 </div>
           </div>
     </div>
-    <div class="col-lg-3">
+    <!-- <div class="col-lg-3">
 
       @if(!empty($productt->whole_sell_qty))
       <div class="table-area wholesell-details-page">
@@ -556,7 +556,7 @@
           </tr>
           @endforeach
         </table>
-      </div>
+      </div> -->
       @endif
 
 
@@ -750,7 +750,7 @@
     </div>
   </div>
   <!-- Trending Item Area Start -->
-<div class="trending">
+<!-- <div class="trending">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 remove-padding">
@@ -773,7 +773,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 <!-- Tranding Item Area End -->
 </section>
 <!-- Product Details Area End -->

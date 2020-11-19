@@ -232,6 +232,7 @@ class CatalogController extends Controller
 
     public function product($slug)
     {
+      
         $this->code_image();
         $productt = Product::where('slug','=',$slug)->firstOrFail();
         $productt->views+=1;

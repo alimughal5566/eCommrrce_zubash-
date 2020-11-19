@@ -45,8 +45,8 @@
 }
 #product-details-tab #comment-area .write-comment-area .submit-btn{
     border: 1px solid #ff5500;
-    border-radius: 50px;
-    padding: 12px 30px;
+    border-radius: 00px;
+    padding: 8px 18px;
 }
 .mainmenu-area .core-nav,
 .mainmenu-area .core-nav .wrap-core-nav-list.right
@@ -286,7 +286,7 @@ input.form-control.card-elements {
 }
 
 .item{
-  border: 1px solid rgba(0, 0, 0, 0)!important;
+  border: 1px solid #c7c7c7!important; height: 100%;
 }
 
 .item:hover {

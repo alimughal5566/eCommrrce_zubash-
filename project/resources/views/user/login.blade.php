@@ -21,9 +21,9 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="nav-log" role="tabpanel" aria-labelledby="nav-log-tab">
             <div class="login-area">
-              <div class="header-area">
+              <!-- <div class="header-area">
                 <h4 class="title">{{ $langg->lang172 }}</h4>
-              </div>
+              </div> -->
               <div class="login-form signin-form">
                 @include('includes.admin.form-login')
                 <form class="mloginform" action="{{ route('user.login.submit') }}" method="POST">
@@ -80,9 +80,9 @@
           </div>
           <div class="tab-pane fade" id="nav-reg" role="tabpanel" aria-labelledby="nav-reg-tab">
             <div class="login-area signup-area">
-              <div class="header-area">
+              <!-- <div class="header-area">
                 <h4 class="title">{{ $langg->lang181 }}</h4>
-              </div>
+              </div> -->
               <div class="login-form signup-form">
                 @include('includes.admin.form-login')
                 <form class="mregisterform" action="{{route('user-register-submit')}}" method="POST">

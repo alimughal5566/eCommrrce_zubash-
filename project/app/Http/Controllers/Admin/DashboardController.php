@@ -240,7 +240,7 @@ class DashboardController extends Controller
         $src = base_path().'/vendor/update';
         $this->recurse_copy($src,$destination);
         $files = public_path();
-        $bkupname = 'Kingcommerce-By-GeniusOcean-'.date('Y-m-d').'.zip';
+        $bkupname = 'Zubash-By-Ivylabtech-'.date('Y-m-d').'.zip';
 
         $zipper = new \Chumper\Zipper\Zipper;
 

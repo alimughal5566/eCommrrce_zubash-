@@ -121,7 +121,7 @@
 
     @endif
 @endif
-
+<div class="header-wrap">
 <section class="top-strip">
     <div class="container-fluid">
         <p><span>Call us +92 21 111-244-266 |</span><span> Free shipping on orders above PKR 1500.</span> <span> No return or exchange on Sale Items.</span>
@@ -259,7 +259,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-8 col-sm-12 remove-padding order-last order-sm-2 order-md-2">
+            <div class="col-lg-7 col-sm-12 remove-padding order-last order-sm-2 order-md-2">
                 <div class="search-box-wrapper">
                     <div class="search-box">
                         <div class="categori-container" id="catSelectForm">
@@ -294,7 +294,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-6 col-7 remove-padding order-lg-last">
+            <div class="col-lg-3 col-sm-6 col-7 remove-padding order-lg-last">
                 <div class="helpful-links">
                     <ul class="helpful-links-inner">
                         <li class="my-dropdown" data-toggle="tooltip" data-placement="top" title="{{ $langg->lang3 }}">
@@ -492,9 +492,10 @@
         </div>
     </div>
 </div>
+</div>
+
 <!--Main-Menu Category End-->
 @yield('content')
-
 <!-- Footer Area Start -->
 <footer class="footer" id="footer">
     <div class="container">

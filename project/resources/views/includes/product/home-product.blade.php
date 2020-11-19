@@ -12,7 +12,7 @@
 												</div>
 												@endif
 												<img class="img-fluid"
-													src="{{ $prod->photo ? asset('assets/images/thumbnails/'.$prod->thumbnail):asset('assets/images/noimage.png') }}"
+													src="{{ $prod->photo ? asset('assets/images/thumbnails/'.$prod->thumbnail) : asset('assets/images/noimage.png') }}"
 													alt="">
 											</div>
 											<div class="info">

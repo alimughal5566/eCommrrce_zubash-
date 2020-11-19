@@ -374,11 +374,11 @@
         </li>
         <li>
             <a href="#sactive" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-                <i class="fas fa-cog"></i>{{ __('System Activation') }}
+                <i class="fas fa-cog"></i>System
             </a>
             <ul class="collapse list-unstyled" id="sactive" data-parent="#accordion">
 
-                <li><a href="{{route('admin-activation-form')}}"> {{ __('Activation') }}</a></li>
+                <!--<li><a href="{{route('admin-activation-form')}}"> {{ __('Activation') }}</a></li>-->
                 <li><a href="{{route('admin-generate-backup')}}"> {{ __('Generate Backup') }}</a></li>
             </ul>
         </li>

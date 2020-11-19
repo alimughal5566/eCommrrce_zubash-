@@ -131,7 +131,7 @@
   margin-top: 20px;
 }
 .checkout .right-area{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .checkout .right-area .footer{
   display: flex;
@@ -478,12 +478,12 @@ nav .menu li a{
    width: 60px;
 }
 .contact-us .contact-section-title .title {
-  font-size: 30px!important;
-  line-height: 40px!important;
+  font-size: 25px!important;
+  line-height: 25px!important;
 }
 .contact-us .contact-section-title .subtitle {
   font-size: 18px!important;
-  line-height: 28px!important;
+  line-height: 19px!important;
 }
 .contact-us .right-area .top-content .title {
   font-size: 24px!important;
@@ -1207,6 +1207,7 @@ div#myInputautocomplete-list {
 #product-details-tab #comment-area .all-comment li .replay-area .remove {
   width: 110px;
 }
+.top-header .content .list ul{padding-left: 0;}
 
   }
   

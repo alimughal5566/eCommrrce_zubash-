@@ -34,9 +34,9 @@
             <h4 class="title">
               {{ $page->title }}
             </h4>
-            <p>
+            
               {!! $page->details !!}
-            </p>
+            
 
           </div>
         </div>

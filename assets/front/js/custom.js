@@ -1461,3 +1461,83 @@ if(status == "success")
 
 
 });
+
+
+/////////////////navigation javascript/////////////////
+
+function Menu() {
+
+  $(".main-menu-nav").on("click", ".menu-toggler", function() {
+
+      $(this).addClass("close");
+      $(".main-menu-div").addClass("mobiel-menu"); /*.css({ "left": "0" });*/
+      $(".body-overlay").css({ "display": "block", "z-index": "1" });
+  });
+  $(".main-menu-nav").on("click", ".body-overlay, .close-icon, .menu-toggler.close", function() {
+
+      $(".menu-toggler").removeClass("close");
+      $(".main-menu-div").removeClass("mobiel-menu");
+      $(".body-overlay").css({ "display": "none", "z-index": "-1" });
+  });
+
+  /* adding span with arrow and .has-sub class */
+  var menuID = $(".main-menu-nav");
+  var downArrows = "<span class='down-arrow'></span>";
+  var catchSubs = menuID.find('li ul');
+
+  catchSubs.parent().addClass('has-sub');
+  catchSubs.parent().append(downArrows);
+
+  /* submenu accordian */
+
+
+  menuID.find('.down-arrow').on('click', function() {
+      if ($(this).siblings('ul').hasClass('open')) {
+
+          $(this).siblings('ul').slideUp(500, function() {
+              jQuery(this).removeClass("open");
+          });
+          $(this).removeClass('submenu-opened');
+      } else {
+
+          $(this).siblings('ul').slideDown(500, function() {
+              jQuery(this).addClass("open");
+          });;
+          $(this).addClass('submenu-opened');
+      }
+  });
+  $(".main-menu-nav ul").unbind('mouseenter mouseleave');
+
+  resizeFix = function() {
+      var mediasize = 991;
+      if ($(window).width() > mediasize) {
+
+          menuID.on("mouseenter", ".has-sub", function() {
+
+              $(this).addClass("hovered");
+          }).on("mouseleave", ".has-sub", function() {
+              $(this).removeClass("hovered");
+          })
+      }
+      if ($(window).width() <= mediasize) {
+
+          $(".main-menu-nav").on("mouseenter", ".has-sub", function() {
+              $(".has-sub").removeClass("hovered");
+
+          }).on("mouseleave", ".has-sub", function() {
+              $(this).removeClass("hovered");
+          })
+      }
+  };
+  resizeFix();
+  return $(window).on('resize', resizeFix);
+}
+
+
+// =============
+
+
+
+jQuery(document).ready(function() {
+  Menu();
+});

@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row justify-content-between">
-                <div class="col-xl-7 col-lg-7 col-md-6">
+                <div class="col-xl-7 col-lg-7 col-md-7">
                     <div class="left-area">
                         <div class="contact-form">
                             <div class="gocover" style="background: url({{ asset('assets/images/'.$gs->loader) }}) no-repeat scroll center center rgba(45, 45, 45, 0.5);"></div>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-5 col-md-6">
+                <div class="col-xl-4 col-lg-5 col-md-5">
                     <div class="right-area">
 
                         @if($ps->site != null || $ps->email != null )
